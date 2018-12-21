@@ -9,7 +9,8 @@ function Scene3() {
         fill('yellow')
         ellipse(w/2, h/2,10,10)
     }
-
+    
+    // KEYS CONTROL
     this.keyPressed = function() {
         if(key == 0) {
             this.sceneManager.showScene( Intro );

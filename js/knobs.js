@@ -10,7 +10,6 @@ let osc1;
 // slider vars ( multipliers ) 
 let x0, x1, x2, x3, x4, x5, x6, x7;
 
-
 function setup() {
     // canvas
     canvas = createCanvas(w, h);
@@ -63,21 +62,21 @@ class Dot {
 function createSliders() {
     // sliders -> createSlider(min, max, [default], [stepSize])
     x0 = createSlider(0, 127, 0, 0.1);
-    x0.parent('sliders-holder');
+    x0.position(100, 100);
     x1 = createSlider(0, 127, 0, 0.1);
-    x1.parent('sliders-holder');
+    x1.position(200, 100);
     x2 = createSlider(0, 127, 0, 0.1);
-    x2.parent('sliders-holder');
+    x2.position(300, 100);
     x3 = createSlider(0, 127, 0, 0.1);
-    x3.parent('sliders-holder');
+    x3.position(400, 100);
     x4 = createSlider(0, 127, 0, 0.1);
-    x4.parent('sliders-holder');
+    x4.position(500, 100);
     x5 = createSlider(0, 127, 0, 0.1);
-    x5.parent('sliders-holder');
+    x5.position(600, 100);
     x6 = createSlider(0, 127, 0, 0.1);
-    x6.parent('sliders-holder');
+    x6.position(700, 100);
     x7 = createSlider(0, 127, 0, 0.1);
-    x7.parent('sliders-holder');
+    x7.position(800, 100);
 }
 
 // MIDI Controller management
@@ -113,30 +112,6 @@ WebMidi.enable(function () {
                     break;
                 case 7:
                     x7.value(e.value);
-                    break;
-                case 8:
-                    x8.value(e.value);
-                    break;
-                case 9:
-                    x9.value(e.value);
-                    break;
-                case 10:
-                    x10.value(e.value);
-                    break;
-                case 11:
-                    x11.value(e.value);
-                    break;
-                case 12:
-                    x12.value(e.value);
-                    break;
-                case 13:
-                    x13.value(e.value);
-                    break;
-                case 14:
-                    x14.value(e.value);
-                    break;
-                case 15:
-                    x15.value(e.value);
                     break;
             }
         }

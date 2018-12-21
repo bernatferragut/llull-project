@@ -1,8 +1,9 @@
 function Intro() {
 
-    // this.setup = function() {
-    //     background(0);
-    // }
+    this.setup = function() {
+        console.log('> intro: connected')
+        // this.createSliders();
+    }
 
     this.draw = function() {
         background(0);
@@ -13,6 +14,7 @@ function Intro() {
 
     }
 
+    // KEYS CONTROL
     this.keyPressed = function() {
         if(key == 0) {
             this.sceneManager.showScene( Intro );
