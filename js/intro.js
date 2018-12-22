@@ -2,7 +2,6 @@ function Intro() {
 
     this.setup = function() {
         console.log('> intro: connected')
-        // this.createSliders();
     }
 
     this.draw = function() {
@@ -10,8 +9,8 @@ function Intro() {
         // intro text
         fill(255);
         textSize(100);
-        text('LLULL', w/2-150, h/2);
-
+        textFont("Rubik Mono One");
+        text('LLULL', w/2-250, h/2);
     }
 
     // KEYS CONTROL

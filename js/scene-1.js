@@ -1,13 +1,26 @@
 function Scene1() {
 
-    // this.setup = function() {
-    //     background('green')
-    // }
+    // dots
+    let dot1;
+    // oscillators
+    let osc1;
+
+    this.setup = function() {
+        dot1 = new Dot(w/2, h/2);
+        // oscillators
+        osc1= new p5.TriOsc();
+        osc1.freq(440);
+        osc1.amp(.5);
+        osc1.start();
+    }
 
     this.draw = function() {
         background('green')
-        fill('red')
-        ellipse(w/2, h/2,10,10)
+        // dot creation
+        dot1.creation(10, 'tomato', x0.value());
+        dot1.randomness(10);
+        // oscillators
+        osc1.freq(x0.value());
     }
 
     // KEYS CONTROL

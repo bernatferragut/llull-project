@@ -3,6 +3,8 @@ console.log('> main: connected');
 
 // global vars
 let w = window.innerWidth, h = window.innerHeight;
+// slider vars ( multipliers ) 
+let x0 , x1, x2, x3, x4, x5, x6, x7;
 let sliderHeight = 50, sliderWidth = 100;
 
 // main p5js setup
@@ -20,6 +22,7 @@ function setup() {
     manager.addScene ( Scene7 );
     manager.addScene ( Scene8 );
     manager.addScene ( Scene9 );
+    // SCENE1 STARTS HERE
     manager.showScene( Intro );   
     // canvas
     createCanvas(w, h);
@@ -28,7 +31,7 @@ function setup() {
     createSliders();
 }
 
-// Sliders creation
+// sliders creation
 function createSliders() {
     // sliders -> createSlider(min, max, [default], [stepSize])
     x0 = createSlider(0, 127, 0, 0.1);
@@ -57,7 +60,24 @@ function createSliders() {
     x7.style('width', '80px');
 }
 
-// check up if midi here or in each of the scenes
+// main dot
+class Dot {
+    constructor(x, y) {
+        this.x = x | 0;
+        this.y = y | 0;
+    }
+    creation(s, c, x0) {
+        noStroke();
+        fill(c);
+        ellipse(this.x, this.y, s+x0, s+x0);
+    }
+    randomness(rnd) {
+        this.x += random(-rnd, rnd);
+        this.y += random(-rnd, rnd);
+    }
+}
+
+// enable MIDI
 WebMidi.enable(function () {
 
     // Retrieve an input by name, id or index
