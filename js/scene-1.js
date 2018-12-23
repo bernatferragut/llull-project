@@ -31,9 +31,11 @@ function Scene1() {
         }else if (key == '1') {
             this.sceneManager.showScene( Scene1 );
             console.log('Scene-1');
+            resetScenes()
         } else if (key == '2') {
             this.sceneManager.showScene( Scene2 );
-            console.log('Scene-2')
+            console.log('Scene-2');
+            resetScenes()
         } else if (key == '3') {
             this.sceneManager.showScene( Scene3 );
             console.log('Scene-3')

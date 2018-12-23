@@ -1,13 +1,27 @@
 function Scene2() {
 
-    // this.setup = function() {
-    //     background('yellow')
-    // }
+    // dots
+    let dot2;
+    // oscillators
+    let osc2;
+
+    this.setup = function() {
+        // dots
+        dot2 = new Dot(w/2, h/2);
+        // oscillators
+        osc2= new p5.SinOsc(120);
+        osc2.freq(120);
+        osc2.amp(.5);
+        osc2.start();
+    }
 
     this.draw = function() {
-        background('yellow')
-        fill('green')
-        ellipse(w/2, h/2,10,10)
+        background('tomato')
+        // dot creation
+        dot2.creation(10, 'yellow', x1.value());
+        dot2.randomness(10);
+        // oscillators
+        osc2.freq(x1.value());
     }
 
     // KEYS CONTROL
@@ -18,9 +32,11 @@ function Scene2() {
         }else if (key == '1') {
             this.sceneManager.showScene( Scene1 );
             console.log('Scene-1');
+            resetScenes()
         } else if (key == '2') {
             this.sceneManager.showScene( Scene2 );
             console.log('Scene-2')
+            resetScenes()
         } else if (key == '3') {
             this.sceneManager.showScene( Scene3 );
             console.log('Scene-3')
