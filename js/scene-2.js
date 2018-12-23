@@ -6,7 +6,7 @@ function Scene2() {
     let osc2;
 
     this.setup = function() {
-        // dots
+        //dot
         dot2 = new Dot(w/2, h/2);
         // oscillators
         osc2= new p5.SinOsc(120);
@@ -30,13 +30,13 @@ function Scene2() {
             this.sceneManager.showScene( Intro );
             console.log('Intro');
         }else if (key == '1') {
+            this.resetScenes();
             this.sceneManager.showScene( Scene1 );
             console.log('Scene-1');
-            resetScenes()
         } else if (key == '2') {
+            this.resetScenes();
             this.sceneManager.showScene( Scene2 );
             console.log('Scene-2')
-            resetScenes()
         } else if (key == '3') {
             this.sceneManager.showScene( Scene3 );
             console.log('Scene-3')
@@ -59,5 +59,15 @@ function Scene2() {
             this.sceneManager.showScene( Scene9 );
             console.log('Scene-9')
         }
+    }
+
+    // reset values
+    this.resetScenes =  function() {
+        // multipliers values to 0
+        x0.value(0);
+        x1.value(0);
+        // oscillators values to 0
+        // osc1.start(0);
+        osc2.start(0);
     }
 }

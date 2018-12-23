@@ -127,11 +127,11 @@ WebMidi.enable(function () {
 }); 
 
 // reset scenes values function
-function resetScenes() {
-    // multipliers values to 0
-    x0.value(0);
-    x1.value(0);
-    // oscillators values to 0
-    osc1.start(0);
-    osc2.start(0);
-}
+// function resetScenes() {
+//     // multipliers values to 0
+//     x0.value(0);
+//     x1.value(0);
+//     // oscillators values to 0
+//     osc1.start(0);
+//     osc2.start(0);
+// }

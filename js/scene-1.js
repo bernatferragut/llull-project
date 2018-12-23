@@ -6,6 +6,7 @@ function Scene1() {
     let osc1;
 
     this.setup = function() {
+        //dot
         dot1 = new Dot(w/2, h/2);
         // oscillators
         osc1= new p5.TriOsc();
@@ -29,13 +30,13 @@ function Scene1() {
             this.sceneManager.showScene( Intro );
             console.log('Intro');
         }else if (key == '1') {
+            this.resetScenes();
             this.sceneManager.showScene( Scene1 );
             console.log('Scene-1');
-            resetScenes()
         } else if (key == '2') {
+            this.resetScenes();
             this.sceneManager.showScene( Scene2 );
             console.log('Scene-2');
-            resetScenes()
         } else if (key == '3') {
             this.sceneManager.showScene( Scene3 );
             console.log('Scene-3')
@@ -58,5 +59,15 @@ function Scene1() {
             this.sceneManager.showScene( Scene9 );
             console.log('Scene-9')
         }
+    }
+
+    // reset values
+    this.resetScenes =  function() {
+        // multipliers values to 0
+        x0.value(0);
+        x1.value(0);
+        // oscillators values to 0
+        osc1.start(0);
+        // osc2.start(0);
     }
 }
