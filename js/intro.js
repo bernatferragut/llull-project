@@ -1,16 +1,38 @@
 function Intro() {
 
+    // font
+    let choice;
+    let letters = ['B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K'];
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let surprise = [];
+    let formed;
+    let llull;
+
     this.setup = function() {
         console.log('> intro: connected')
     }
 
     this.draw = function() {
+        // bg
         background(0);
-        // intro text
-        fill(255);
-        textSize(100);
-        textFont("Rubik Mono One");
-        text('LLULL', w/2-250, h/2);
+        // random generation letters
+        surprise = [];
+        for(let i=0; i < 4; i++) {
+            choice = random();
+            if(choice > 0.5) {
+                surprise.push(letters[Math.floor(random(letters.length))]);
+            }
+            surprise.push(numbers[Math.floor(random(numbers.length))]);
+        }
+        formed = surprise.join('');
+        // text
+        if(choice > 0.5) {
+            llull = new word(w/2, h/2, 255, 200, formed);
+            llull.creation();
+        } else {
+            llull = new word(w/2, h/2, 'tomato', 200, 'LLULL');
+            llull.creation();
+        }
     }
 
     // KEYS CONTROL

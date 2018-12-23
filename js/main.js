@@ -1,7 +1,7 @@
 // MAIN.JS
 console.log('> main: connected');
 
-// global vars
+// canvas vars
 let w = window.innerWidth, h = window.innerHeight;
 // slider vars ( multipliers ) 
 let x0 , x1, x2, x3, x4, x5, x6, x7;
@@ -60,7 +60,7 @@ function createSliders() {
     x7.style('width', '80px');
 }
 
-// main dot
+// dot
 class Dot {
     constructor(x, y) {
         this.x = x | 0;
@@ -77,6 +77,23 @@ class Dot {
     }
 }
 
+// text
+class word {
+    constructor(x, y, c, s, t) {
+        this.x = x;
+        this.y = y;
+        this.c = c;
+        this.s = s;
+        this.t = t;
+    }
+    creation() {
+        fill(this.c);
+        textSize(this.s);
+        textFont("Montserrat");
+        textAlign('center');
+        text(this.t, w/2, h/2);
+    }
+}
 // enable MIDI
 WebMidi.enable(function () {
 
@@ -125,13 +142,3 @@ WebMidi.enable(function () {
     );
     console.log('> web-midi: connected');
 }); 
-
-// reset scenes values function
-// function resetScenes() {
-//     // multipliers values to 0
-//     x0.value(0);
-//     x1.value(0);
-//     // oscillators values to 0
-//     osc1.start(0);
-//     osc2.start(0);
-// }
