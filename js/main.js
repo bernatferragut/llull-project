@@ -91,7 +91,7 @@ class word {
         textSize(this.s);
         textFont("Montserrat");
         textAlign('center');
-        text(this.t, w/2, h/2);
+        text(this.t, this.x, this.y);
     }
 }
 // enable MIDI
@@ -103,39 +103,39 @@ WebMidi.enable(function () {
     // Listen to control change message on all channels
     input.addListener('controlchange', 1,
         function (e) {
-            console.log("Received 'controlchange' message.", e);
+            // console.log("Received 'controlchange' message.", e);
             switch (e.controller.number) {
                 case 0:
-                    x0.value(e.value);
-                    console.log(x0.value(e.value));
+                    x0 = x0.value(e.value);
+                    console.log(x0.value());
                     break
                 case 1:
                     x1.value(e.value);
-                    console.log(x1.value(e.value));
+                    console.log(x1.value());
                     break;
                 case 2:
                     x2.value(e.value);
-                    console.log(x2.value(e.value));
+                    console.log(x2.value());
                     break;
                 case 3:
                     x3.value(e.value);
-                    console.log(x3.value(e.value));
+                    console.log(x3.value());
                     break;
                 case 4:
                     x4.value(e.value);
-                    console.log(x4.value(e.value));
+                    console.log(x4.value());
                     break;
                 case 5:
                     x5.value(e.value);
-                    console.log(x5.value(e.value));
+                    console.log(x5.value());
                     break;
                 case 6:
                     x6.value(e.value);
-                    console.log(x6.value(e.value));
+                    console.log(x6.value());
                     break;
                 case 7:
                     x7.value(e.value);
-                    console.log(x7.value(e.value));
+                    console.log(x7.value());
                     break;
             }
         }

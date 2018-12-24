@@ -5,32 +5,43 @@ function Intro() {
     let letters = ['B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K'];
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     let surprise = [];
-    let formed;
+    let formedWord;
     let llull;
+    // x0=>size, x1=>transparency, x2=>color, x3=>random
 
     this.setup = function() {
         console.log('> intro: connected')
     }
-
+    
     this.draw = function() {
         // bg
         background(0);
         // random generation letters
-        surprise = [];
-        for(let i=0; i < 4; i++) {
-            choice = random();
+        surprise = []; // 4 letters long
+        for(let i=0; i < 3; i++) {
+            choice = random(); // (0-1) float number
             if(choice > 0.5) {
-                surprise.push(letters[Math.floor(random(letters.length))]);
+                surprise.push(letters[int(random(letters.length))]);
             }
-            surprise.push(numbers[Math.floor(random(numbers.length))]);
+            surprise.push(numbers[int(random(numbers.length))]);
         }
-        formed = surprise.join('');
-        // text
+        formedWord = surprise.join('');
+        // text formation in two layers
         if(choice > 0.5) {
-            llull = new word(w/2, h/2, 255, 200, formed);
+            llull = new word(
+                    w/2 + random( x2.value(), -x2.value()),
+                    h/2 + random( x2.value(), -x2.value()),
+                    x1.value() + 123,  
+                    x0.value() + 100, 
+                    formedWord);
             llull.creation();
         } else {
-            llull = new word(w/2, h/2, 'tomato', 200, 'LLULL');
+            llull = new word(
+                    w/2 + random( x2.value(), -x2.value()),
+                    h/2 + random( x2.value(), -x2.value()),
+                    'tomato',  
+                    x0.value() + 100, 
+                    'LLULL');
             llull.creation();
         }
     }
