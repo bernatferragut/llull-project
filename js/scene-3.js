@@ -12,16 +12,16 @@ function Scene3() {
         // oscillators
         osc3 = new p5.SawOsc(80);
         osc3.amp(.5);
-        osc3.start();
+        // osc3.start();
         osc4 = new p5.SawOsc(80);
         osc4.amp(.5);
-        osc4.start();
+        // osc4.start();
     }
 
     this.draw = function() {
         background('red')
         fill('yellow')
-        dot3
+        // dot3
     }
     
     // KEYS CONTROL

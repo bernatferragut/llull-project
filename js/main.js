@@ -1,11 +1,12 @@
 // MAIN.JS
 console.log('> main: connected');
-
+// colors
+const COLORS = ['rgb(255, 199, 26)','rgb(237, 28, 36)', 'rgb(0, 166, 81)' ];
 // canvas vars
 let w = window.innerWidth, h = window.innerHeight;
 // slider vars ( multipliers ) 
 let x0 , x1, x2, x3, x4, x5, x6, x7;
-let sliderHeight = 50, sliderWidth = 100;
+let sliderHeight = 50, sliderWidth = 130;
 
 // main p5js setup
 function setup() {
@@ -69,7 +70,7 @@ class Dot {
     creation(s, c, x0) {
         noStroke();
         fill(c);
-        ellipse(this.x, this.y, s+x0, s+x0);
+        ellipse(this.x, this.y, s*x0, s*x0);
     }
     randomness(rnd) {
         this.x += random(-rnd, rnd);
@@ -107,35 +108,35 @@ WebMidi.enable(function () {
             switch (e.controller.number) {
                 case 0:
                     x0 = x0.value(e.value);
-                    console.log(x0.value());
+                    console.log('x0: ' + x0.value());
                     break
                 case 1:
                     x1.value(e.value);
-                    console.log(x1.value());
+                    console.log('x1: ' + x1.value());
                     break;
                 case 2:
                     x2.value(e.value);
-                    console.log(x2.value());
+                    console.log('x2: ' + x2.value());
                     break;
                 case 3:
                     x3.value(e.value);
-                    console.log(x3.value());
+                    console.log('x3: ' + x3.value());
                     break;
                 case 4:
                     x4.value(e.value);
-                    console.log(x4.value());
+                    console.log('x4: ' + x4.value());
                     break;
                 case 5:
                     x5.value(e.value);
-                    console.log(x5.value());
+                    console.log('x5: ' + x5.value());
                     break;
                 case 6:
                     x6.value(e.value);
-                    console.log(x6.value());
+                    console.log('x6: ' + x6.value());
                     break;
                 case 7:
                     x7.value(e.value);
-                    console.log(x7.value());
+                    console.log('x7: ' + x7.value());
                     break;
             }
         }

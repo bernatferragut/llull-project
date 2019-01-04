@@ -1,27 +1,29 @@
 function Scene1() {
-
+    let colors = ['rgba(255, 199, 26,0.5)','rgb(237, 28, 36)', 'rgb(0, 166, 81)' ];
     // dots
     let dot1;
     // oscillators
     let osc1;
+    // dot 
+    let s;
 
     this.setup = function() {
         //dot
         dot1 = new Dot(w/2, h/2);
         // oscillators
-        osc1= new p5.TriOsc();
-        osc1.freq(440);
-        osc1.amp(.5);
-        osc1.start();
+        // osc1= new p5.SawOsc();
+        // osc1.freq(140);
+        // osc1.amp(.05);
+        // osc1.start();
     }
 
     this.draw = function() {
-        background('green')
+        background(color(colors[0]));
         // dot creation
-        dot1.creation(10, 'tomato', x0.value());
-        dot1.randomness(10);
+        dot1.creation(10, 'tomato', x0.value() * 10);
+        dot1.randomness(x2.value()/6);
         // oscillators
-        osc1.freq(x0.value());
+        // osc1.freq(x0.value());
     }
 
     // KEYS CONTROL

@@ -16,12 +16,12 @@ function Scene2() {
     }
 
     this.draw = function() {
-        background('tomato')
+        background('tomato',x0.value())
         // dot creation
         dot2.creation(10, 'yellow', x1.value());
-        dot2.randomness(10);
+        dot2.randomness(x2.value()/6);
         // oscillators
-        osc2.freq(x1.value());
+        // osc2.freq(x1.value());
     }
 
     // KEYS CONTROL
