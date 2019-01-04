@@ -9,16 +9,16 @@ function Scene2() {
         //dot
         dot2 = new Dot(w/2, h/2);
         // oscillators
-        osc2= new p5.SinOsc(120);
-        osc2.freq(120);
-        osc2.amp(.5);
-        osc2.start();
+        // osc2= new p5.SinOsc(120);
+        // osc2.freq(120);
+        // osc2.amp(.5);
+        // osc2.start();
     }
 
     this.draw = function() {
-        background('tomato',x0.value())
+        background('tomato')
         // dot creation
-        dot2.creation(10, 'yellow', x1.value());
+        dot2.creation(10, 'red', x1.value());
         dot2.randomness(x2.value()/6);
         // oscillators
         // osc2.freq(x1.value());
