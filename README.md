@@ -3,7 +3,7 @@
 * mp4 video demo1 - Intro + Scene1
 > [LINK](https://drive.google.com/open?id=1ChxvXTbIlAZo9w469-dWbp-sUh9ogUfD)
 
-## llull-project-demo1 | Code
+## llull-project-demo1 | code
 
 * code demo1 + structure
 > [LINK](https://github.com/bernatferragut/llull-project)
