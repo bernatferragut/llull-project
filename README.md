@@ -1,11 +1,11 @@
 ## llull-project-demo1 |  mp4 video
 
-* Video Demo mp4- 2 Scenes: Intro + Scene1
+* mp4 video demo1 - Intro + Scene1
 > [LINK](https://drive.google.com/open?id=1ChxvXTbIlAZo9w469-dWbp-sUh9ogUfD)
 
 ## llull-project-demo1 | Code
 
-* Demo1 Code and structure.
+* code demo1 + structure
 > [LINK](https://github.com/bernatferragut/llull-project)
 
 ## Multiples scenes with P5JS Scene Manager Plugin
