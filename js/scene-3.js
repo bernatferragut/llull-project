@@ -1,13 +1,27 @@
 function Scene3() {
 
-    // this.setup = function() {
-    //     background('red')
-    // }
+    // dots
+    let dot3, dot4;
+    // oscillators
+    let osc3, osc4;
+
+    this.setup = function() {
+        // dots
+        dot3 = new Dot(w/2, h/2);
+        dot4 =  new Dot(w/2, h/2);
+        // oscillators
+        osc3 = new p5.SawOsc(80);
+        osc3.amp(.5);
+        osc3.start();
+        osc4 = new p5.SawOsc(80);
+        osc4.amp(.5);
+        osc4.start();
+    }
 
     this.draw = function() {
         background('red')
         fill('yellow')
-        ellipse(w/2, h/2,10,10)
+        dot3
     }
     
     // KEYS CONTROL
@@ -44,4 +58,8 @@ function Scene3() {
             console.log('Scene-9')
         }
     }
+
+    // COLLISION + CHANGE COLORS
+
+    
 }
