@@ -1,9 +1,9 @@
-## llull-project-Demo1 |  mp4 video
+## llull-project-demo1 |  mp4 video
 
 * Video Demo mp4- 2 Scenes: Intro + Scene1
 > [LINK](https://drive.google.com/open?id=1ChxvXTbIlAZo9w469-dWbp-sUh9ogUfD)
 
-## llull-project-Demo1 | Code
+## llull-project-demo1 | Code
 
 * Demo1 Code and structure.
 > [LINK](https://github.com/bernatferragut/llull-project)
