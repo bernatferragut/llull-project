@@ -24,6 +24,7 @@ function Scene2() {
         // osc2.freq(x1.value());
     }
 
+    // keys | 0: Intro, 1: Scene-1, 2: Scene-2, ..., 9: Scene-9
     // KEYS CONTROL
     this.keyPressed = function() {
         if(key == 0) {

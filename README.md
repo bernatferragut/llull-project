@@ -6,7 +6,7 @@
 ## llull-project-demo1 | code
 
 * code demo1 + structure
-* keys | 0: Intro, 1: Scene-1, 2: Scene-2, ..., 9: Scene-9
+* keys | 0: Intro, 1: Scene-1, 2: Scene-2, --- 9: Scene-9...etc
 > [LINK](https://github.com/bernatferragut/llull-project)
 
 ## Multiples scenes with P5JS Scene Manager Plugin

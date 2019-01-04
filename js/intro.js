@@ -62,7 +62,7 @@ function Intro() {
             llull.creation();
         }
     }
-
+    // keys | 0: Intro, 1: Scene-1, 2: Scene-2, ..., 9: Scene-9
     // KEYS CONTROL
     this.keyPressed = function() {
         if(key == 0) {
